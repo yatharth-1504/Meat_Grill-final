@@ -230,6 +230,11 @@ body {
 .row {
   margin-bottom: 100px;
 }
+.row-centered{
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: center;
+}
 .row-equal-height {
   display: table;
 }
@@ -273,7 +278,7 @@ img.float-right {
   margin: 0 auto;
 }
 .page-content .logo img {
-  margin: 0 auto;
+  margin: 0px auto;
 }
 .container-fluid.padding-0 .row {
   margin-right: 0 !important;
@@ -571,7 +576,7 @@ a.more-details .fa {
     background-color: rgba(0, 0, 0, 0);
   }
   to {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: #919191;
   }
 }
 @keyframes headerFadeIn {
@@ -579,13 +584,14 @@ a.more-details .fa {
     background-color: rgba(0, 0, 0, 0);
   }
   to {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: #919191;
   }
 }
 .resize-header .logo {
   margin: 10px 0;
 }
 .resize-header .logo img {
+  margin: 10px;
   max-width: 100%;
   -webkit-animation: reduceLogo 0.1s forwards;
   animation: reduceLogo 0.1s forwards;
@@ -808,7 +814,8 @@ a.more-details .fa {
 }
 .page-title-1 {
   opacity: 85%;
-  background-image: url("../img/page-titles/page-title-1.jpg");
+  background-image: url("../img/dropbox_photos/about-bkg-2.jpg");
+  /* background-clip: url("..img/page-titles/page-title-video-1.mp4"); */
 }
 .page-title-2 {
   opacity: 85%;
@@ -881,21 +888,26 @@ a.more-details .fa {
 }
 .bkg-img1 {
   background-image: url("../img/pics/bkg-img1.jpg");
+  /* background-image: url("https://images.unsplash.com/photo-1509624776920-0fac24a9dfda?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); */
 }
 .bkg-img2 {
-  background-image: url("../img/pics/bkg-img2.png");
+  /* background-image: url("../img/pics/bkg-img2.png"); */
+  background-image: url("https://cdn.pixabay.com/photo/2021/08/04/20/42/cutlery-6522579_960_720.png");
 }
 .bkg-img3 {
-  background-image: url("../img/pics/bkg-img3.jpg");
+  /* background-image: url("../img/pics/bkg-img3.jpg"); */
+  background-image: url("../img/dropbox_photos/meat-feast.jpg");
 }
 .bkg-img4 {
-  background-image: url("../img/pics/bkg-img4.jpg");
+  /* background-image: url("../img/pics/bkg-img4.jpg"); */
+  background-image: url("../img/dropbox_photos/indoor-outdoor.png");
 }
 .bkg-img5 {
   background-image: url("../img/pics/bkg-img5.jpg");
 }
 .bkg-img6 {
   background-image: url("../img/pics/bkg-img6.jpg");
+  /* background-image: url("../img/dropbox_photos/our-story.jpg"); */
 }
 .bkg-img7 {
   background-image: url("../img/pics/bkg-img7.jpg");
