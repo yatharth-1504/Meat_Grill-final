@@ -576,7 +576,7 @@ a.more-details .fa {
     background-color: rgba(0, 0, 0, 0);
   }
   to {
-    background-color: #919191;
+    background-color: #a1a0a0;
   }
 }
 @keyframes headerFadeIn {
@@ -584,7 +584,7 @@ a.more-details .fa {
     background-color: rgba(0, 0, 0, 0);
   }
   to {
-    background-color: #919191;
+    background-color: #a1a0a0;
   }
 }
 .resize-header .logo {
@@ -813,32 +813,25 @@ a.more-details .fa {
   padding: 30px 0;
 }
 .page-title-1 {
-  opacity: 85%;
   background-image: url("../img/dropbox_photos/about-bkg-2.jpg");
   /* background-clip: url("..img/page-titles/page-title-video-1.mp4"); */
 }
 .page-title-2 {
-  opacity: 85%;
   background-image: url("../img/page-titles/page-title-2.jpg");
 }
 .page-title-3 {
-  opacity: 85%;
   background-image: url("../img/page-titles/page-title-2.jpg");
 }
 .page-title-4 {
-  opacity: 85%;
   background-image: url("../img/page-titles/page-title-4.jpg");
 }
 .page-title-5 {
-  opacity: 85%;
   background-image: url("../img/page-titles/page-title-5.jpg");
 }
 .page-title-6 {
-  opacity: 85%;
   background-image: url("../img/page-titles/page-title-6.jpg");
 }
 .page-title-7 {
-  opacity: 85%;
   background-image: url("../img/page-titles/page-title-7.jpg");
 }
 .page-title-8 {
@@ -3511,7 +3504,7 @@ textarea:-ms-input-placeholder {
 ========================================================================= */
 #footer-wrapper {
   position: relative;
-  background-color: #0b0e13;
+  background-color: rgb(242, 241, 241);
   background-image: url("../img/pics/footer-bkg-img1.png"),
     url("../img/pics/footer-bkg-img2.png");
   background-position: left 60px, right 60px;
@@ -3609,7 +3602,7 @@ textarea:-ms-input-placeholder {
 }
 #copyright-container {
   position: relative;
-  background-color: #0b0e13;
+  background-color: #a1a0a0;
   border-top: 1px solid #161d27;
   padding: 10px 0;
 }
@@ -3617,7 +3610,7 @@ textarea:-ms-input-placeholder {
   margin-bottom: 0;
 }
 #copyright-container p {
-  color: #7f848a;
+  color: white;
   padding-bottom: 0;
   padding-top: 15px;
   font-size: 13px;
@@ -3641,7 +3634,7 @@ textarea:-ms-input-placeholder {
 }
 #copyright-container .breadcrumb li a {
   font-size: 13px;
-  color: #7f848a;
+  color: white;
 }
 #copyright-container .breadcrumb > li + li:before {
   display: none;
