@@ -642,7 +642,7 @@ a.more-details .fa {
 }
 .logo {
   margin: 20px auto;
-  max-width: 160px;
+  max-width: 190px;
   max-height: 82px;
 }
 #header .nav-left .navbar-header {
@@ -823,7 +823,8 @@ a.more-details .fa {
   background-image: url("../img/page-titles/page-title-2.jpg");
 }
 .page-title-4 {
-  background-image: url("../img/page-titles/page-title-4.jpg");
+  /* opacity: 60%; */
+  background-image: url("../img/dropbox_photos/indoor-outdoor.png");
 }
 .page-title-5 {
   background-image: url("../img/page-titles/page-title-5.jpg");
@@ -832,7 +833,7 @@ a.more-details .fa {
   background-image: url("../img/page-titles/page-title-6.jpg");
 }
 .page-title-7 {
-  background-image: url("../img/page-titles/page-title-7.jpg");
+  background-image: url("../img/dropbox_photos/destination-catering.jpg");
 }
 .page-title-8 {
   background-image: url("../img/page-titles/page-title-8.jpg");
@@ -885,7 +886,8 @@ a.more-details .fa {
 }
 .bkg-img2 {
   /* background-image: url("../img/pics/bkg-img2.png"); */
-  background-image: url("https://cdn.pixabay.com/photo/2021/08/04/20/42/cutlery-6522579_960_720.png");
+  /* background-image: url("https://cdn.pixabay.com/photo/2021/08/04/20/42/cutlery-6522579_960_720.png"); */
+  background-image: url("https://cdn.pixabay.com/photo/2014/04/02/10/19/plate-303475_1280.png");
 }
 .bkg-img3 {
   /* background-image: url("../img/pics/bkg-img3.jpg"); */
@@ -899,11 +901,11 @@ a.more-details .fa {
   background-image: url("../img/pics/bkg-img5.jpg");
 }
 .bkg-img6 {
-  background-image: url("../img/pics/bkg-img6.jpg");
+  background-image: url("../img/dropbox_photos/indoor-outdoor.png");
   /* background-image: url("../img/dropbox_photos/our-story.jpg"); */
 }
 .bkg-img7 {
-  background-image: url("../img/pics/bkg-img7.jpg");
+  background-image: url("../img/dropbox_photos/destination-catering.jpg");
 }
 .bkg-img8 {
   background-image: url("../img/pics/bkg-img8.jpg");
@@ -921,7 +923,7 @@ a.more-details .fa {
   background-image: url("../img/pics/bkg-img12.jpg");
 }
 .bkg-img13 {
-  background-image: url("../img/pics/bkg-img13.jpg");
+  background-image: url("../img/dropbox_photos/indoor-outdoor.png");
 }
 .bkg-img14 {
   background-image: url("../img/pics/bkg-img14.png");
@@ -1338,6 +1340,7 @@ a.more-details .fa {
 }
 .divider.style-2.center {
   margin: 0 auto 0 auto;
+  background-color: #020202;
 }
 .divider.style-2 {
   width: 240px;
@@ -2587,7 +2590,9 @@ ul#filters {
 ============================================================================= */
 
 .master-slider .pi-caption01 {
-  font-family: "Suranna", serif;
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 400;
+  font-style: normal;
   color: #fff;
   font-size: 78px;
   line-height: 78px;
@@ -3519,10 +3524,15 @@ textarea:-ms-input-placeholder {
   margin-top: 30px;
 }
 #footer-wrapper .contact-info-list li {
-  color: #acb8c4;
+  /* color: #acb8c4; */
+  color: #4a556a;
   font-size: 14px;
   margin: 2px 0;
 }
+#footer-wrapper .contact-info-list span{
+  color: #f0aa06;
+}
+
 .social-links {
   display: table;
 }
