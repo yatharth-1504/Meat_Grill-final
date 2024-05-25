@@ -1,5 +1,5 @@
 /* 
-    Template Name: Royal Plate - Restaurant & Catering HTML Template
+    Template Name: Meat & Grill Catering Services
     Author: Pixel Industry
     Website: www.pixel-industry.com
 */
@@ -254,6 +254,12 @@ body {
   color: #161d27;
   margin-bottom: 25px;
 }
+.logo img {
+  max-width: 100%;
+  height: auto;
+  max-height: 160px;
+  display: block;
+}
 img {
   max-width: 100%;
   height: auto;
@@ -279,6 +285,7 @@ img.float-right {
 }
 .page-content .logo img {
   margin: 0px auto;
+  max-height: 90px;
 }
 .container-fluid.padding-0 .row {
   margin-right: 0 !important;
@@ -553,6 +560,7 @@ a.more-details .fa {
 .custom-heading.style-1 span,
 .custom-heading.style-2 span,
 .menu-item-price p {
+  /* color: #feffbb */
   font-family: "Montez", cursive;
   text-transform: none;
 }
@@ -814,28 +822,36 @@ a.more-details .fa {
 }
 .page-title-1 {
   background-image: url("../img/dropbox_photos/about-bkg-2.jpg");
+  opacity: 85%;
   /* background-clip: url("..img/page-titles/page-title-video-1.mp4"); */
 }
 .page-title-2 {
+  opacity: 85%;
   background-image: url("../img/page-titles/page-title-2.jpg");
 }
 .page-title-3 {
+  opacity: 85%;
   background-image: url("../img/page-titles/page-title-2.jpg");
 }
 .page-title-4 {
   /* opacity: 60%; */
+  opacity: 85%;
   background-image: url("../img/dropbox_photos/indoor-outdoor.png");
 }
 .page-title-5 {
+  opacity: 85%;
   background-image: url("../img/page-titles/page-title-5.jpg");
 }
 .page-title-6 {
+  opacity: 85%;
   background-image: url("../img/page-titles/page-title-6.jpg");
 }
 .page-title-7 {
+  opacity: 85%;
   background-image: url("../img/dropbox_photos/destination-catering.jpg");
 }
 .page-title-8 {
+  opacity: 85%;
   background-image: url("../img/page-titles/page-title-8.jpg");
 }
 

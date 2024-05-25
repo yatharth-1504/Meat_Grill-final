@@ -1330,7 +1330,7 @@ All this is done for any sub-level being entered.
     margin: 20px auto;
   }
   .logo img {
-    height: 80px;
+    height: 85px;
   }
 
   /*  PAGE CONTENT STYLING
@@ -2462,7 +2462,7 @@ All this is done for any sub-level being entered.
   .collapse.navbar-collapse {
     width: 30%;
     float: left;
-    margin-top: 20px;
+    /* margin-top: 20px; */
   }
   .navbar-header,
   #header.header-type-1 .nav-left .navbar-header {
@@ -2473,7 +2473,7 @@ All this is done for any sub-level being entered.
     margin: 10px auto;
   }
   .logo img {
-    height: 65px;
+    height: 75px;
   }
   .navbar {
     margin-bottom: 0;
