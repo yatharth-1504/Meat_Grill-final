@@ -901,9 +901,9 @@ a.more-details .fa {
   /* background-image: url("https://images.unsplash.com/photo-1509624776920-0fac24a9dfda?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); */
 }
 .bkg-img2 {
-  /* background-image: url("../img/pics/bkg-img2.png"); */
+  background-image: url("../img/pics/bkg-img2.png");
   /* background-image: url("https://cdn.pixabay.com/photo/2021/08/04/20/42/cutlery-6522579_960_720.png"); */
-  background-image: url("https://cdn.pixabay.com/photo/2014/04/02/10/19/plate-303475_1280.png");
+  /* background-image: url("https://cdn.pixabay.com/photo/2014/04/02/10/19/plate-303475_1280.png"); */
 }
 .bkg-img3 {
   /* background-image: url("../img/pics/bkg-img3.jpg"); */
@@ -3542,7 +3542,7 @@ textarea:-ms-input-placeholder {
 #footer-wrapper .contact-info-list li {
   /* color: #acb8c4; */
   color: #4a556a;
-  font-size: 14px;
+  font-size: 16px;
   margin: 2px 0;
 }
 #footer-wrapper .contact-info-list span{
