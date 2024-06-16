@@ -257,7 +257,7 @@ body {
 .logo img {
   max-width: 100%;
   height: auto;
-  max-height: 160px;
+  max-height: 200px;
   display: block;
 }
 img {
@@ -592,7 +592,9 @@ a.more-details .fa {
     background-color: rgba(0, 0, 0, 0);
   }
   to {
-    background-color: #a1a0a0;
+    /* background-color: #a1a0a0; */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* background: transparent; */
   }
 }
 .resize-header .logo {
@@ -1356,7 +1358,7 @@ a.more-details .fa {
 }
 .divider.style-2.center {
   margin: 0 auto 0 auto;
-  background-color: #020202;
+  /* background-color: #020202; */
 }
 .divider.style-2 {
   width: 240px;
@@ -2030,6 +2032,11 @@ ul#filters {
 }
 .menu-left-shadow .menu-style-2 .menu-item-description p,
 .menu-right-shadow .menu-style-2 .menu-item-description p {
+  padding-right: 55px;
+}
+
+.menu-left .menu-style-2 .menu-item-description p,
+.menu-right .menu-style-2 .menu-item-description p {
   padding-right: 55px;
 }
 
