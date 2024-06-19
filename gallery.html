@@ -21,6 +21,7 @@
 
     <!-- Magnific Popup - image lightbox -->
     <link rel="stylesheet" href="css/magnific-popup.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Google Web fonts -->
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -416,6 +417,14 @@
         </div><!-- .container-fluid end -->
     </div><!-- .page-content end -->
 
+    <!-- .page-content start -->
+     <div class="video" style="height: fit-content; position: relative;">
+        <video style="width: 100%;" id="background-video" class="background-video" controls>
+            <source src="img/dropbox_photos/home-video.mp4" type="video/mp4">
+        </video>
+        <button style="position: absolute; top: 50%; left: 50%; background-color: white; padding: 0;margin: 0;border-radius: 50%;" id="play-button"><i class="fa fa-play-circle" style="font-size:48px;color:red;"></i></button>
+     </div>
+    
     <!-- #footer-wrapper start -->
     <div id="footer-wrapper">
         <!-- #footer start -->
@@ -560,6 +569,26 @@
         });
         /* ]]> */
     </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var video = document.getElementById('background-video');
+        var playButton = document.getElementById('play-button');
+
+        playButton.addEventListener('click', function () {
+            video.play();
+            playButton.style.display = 'none'; // Hide the play button once the video starts
+        });
+
+        // Ensure the video plays with sound on user interaction
+        document.addEventListener('click', function () {
+            if (video.paused && playButton.style.display !== 'none') {
+                video.play();
+                playButton.style.display = 'none'; // Hide the play button once the video starts
+            }
+        }, { passive: false } );
+    });
+</script>
 
 </body>
 
