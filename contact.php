@@ -372,7 +372,7 @@ if ($action == 'contact') {
 
     // Recipients
     $mail->setFrom($sendFrom, $sendFromName);
-    $mail->addAddress($bussiness_email, 'boss');
+    $mail->addAddress($email, $name);
     $mail->addReplyTo($sendFrom, $sendFromName);
 
     // Content
