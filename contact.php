@@ -1447,8 +1447,8 @@ if ($action == 'contact') {
     $mail->addAddress($bussiness_email, 'boss');
 
     $mail->send();
-
-    echo 'Your Booking Details sent Succesfully✅︎';
+    // Your Booking Details have been sent to Meat & Grill successfully. We Look forward to delivering an unforgettable food experience  
+    echo 'Your Booking Details have been sent to Meat & Grill successfully✅︎. We Look forward to delivering an unforgettable food experience:(';
     } catch (Exception $e) {
     echo "There was a problem while sending the E-Mail. Mailer Error: {$e}";
     }
