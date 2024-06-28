@@ -3775,7 +3775,7 @@ textarea:-ms-input-placeholder {
         position: relative;
     }
     
-    .logos:before,
+    /* .logos:before,
     .logos:after {
         position: absolute;
         top: 0;
@@ -3783,9 +3783,9 @@ textarea:-ms-input-placeholder {
         height: 100%;
         content: "";
         z-index: 2;
-    }
+    } */
     
-    .logos:before {
+    /* .logos:before {
         left: 0;
         background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
     }
@@ -3794,7 +3794,7 @@ textarea:-ms-input-placeholder {
         right: 0;
         background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
     }
-    
+     */
     .logos:hover .logos-slide {
         animation-play-state: paused;
     }

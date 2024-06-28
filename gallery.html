@@ -30,12 +30,13 @@
     <!-- Font icons -->
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" /><!-- Font awesome icons -->
     <style>
-        .carousel-container {
+     .carousel-container {
     position: relative;
     width: 100%;
     overflow: hidden;
     margin-bottom: 50px;
     height: 500px; /* Fixed height for the carousel */
+    background-color: black; /* Set the background color to black */
 }
 
 .carousel {
@@ -48,20 +49,24 @@
     min-width: 100%;
     box-sizing: border-box;
     position: relative;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
     height: 100%; /* Ensure each slide takes up the full height of the carousel */
+    background-color: rgba(25, 24, 24, 0.5); /* Set the background color to black */
 }
 
 .background-video {
-    width: 100%;
     height: 100%; /* Ensure the video takes up the full height of the slide */
-    object-fit: cover; /* Ensure the video covers the entire slide without stretching */
+    width: auto;
+    object-fit: contain; /* Ensure the video maintains its aspect ratio */
 }
 
 .carousel-control {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(25, 24, 24, 0.5);
     color: white;
     border: none;
     padding: 10px;
@@ -94,6 +99,7 @@
     font-size: 48px;
     color: red;
 }
+
     </style>
 </head>
 
@@ -428,37 +434,37 @@
             <div class="carousel-container">
                 <div class="carousel">
                     <div class="video-slide">
-                        <video style="width: 100%;" id="background-video1" class="background-video" controls>
+                        <video id="background-video1" class="background-video" controls>
                             <source src="img/dropbox_photos/home-video.mp4" type="video/mp4">
                         </video>
                         <button class="play-button" onclick="playPauseVideo(1)"><i class="fa fa-play-circle"></i></button>
                     </div>
                     <div class="video-slide">
-                        <video style="width: 100%;" id="background-video2" class="background-video" controls>
+                        <video id="background-video2" class="background-video" controls>
                             <source src="img/videos/Video2.mov" type="video/mp4">
                         </video>
                         <button class="play-button" onclick="playPauseVideo(2)"><i class="fa fa-play-circle"></i></button>
                     </div>
                     <div class="video-slide">
-                        <video style="width: 100%;" id="background-video3" class="background-video" controls>
+                        <video id="background-video3" class="background-video" controls>
                             <source src="img/videos/Video3.mov" type="video/mp4">
                         </video>
                         <button class="play-button" onclick="playPauseVideo(3)"><i class="fa fa-play-circle"></i></button>
                     </div>
                     <div class="video-slide">
-                        <video style="width: 100%;" id="background-video4" class="background-video" controls>
+                        <video id="background-video4" class="background-video" controls>
                             <source src="img/videos/Video4.mov" type="video/mp4">
                         </video>
                         <button class="play-button" onclick="playPauseVideo(4)"><i class="fa fa-play-circle"></i></button>
                     </div>
                     <div class="video-slide">
-                        <video style="width: 100%;" id="background-video5" class="background-video" controls>
+                        <video id="background-video5" class="background-video" controls>
                             <source src="img/videos/Video5.mov" type="video/mp4">
                         </video>
                         <button class="play-button" onclick="playPauseVideo(5)"><i class="fa fa-play-circle"></i></button>
                     </div>
                     <div class="video-slide">
-                        <video style="width: 100%;" id="background-video6" class="background-video" controls>
+                        <video id="background-video6" class="background-video" controls>
                             <source src="img/videos/Video6.mov" type="video/mp4">
                         </video>
                         <button class="play-button" onclick="playPauseVideo(6)"><i class="fa fa-play-circle"></i></button>
@@ -469,6 +475,7 @@
             </div>
         </div>
     </div>
+    
     <!-- .page-content end -->
 
     <!-- #footer-wrapper start -->
@@ -595,35 +602,66 @@
         /* ]]> */
     </script>
 
-    <script>
-       let currentSlide = 0;
+<script>
+    let currentSlide = 0;
 
-function moveSlide(direction) {
-    const slides = document.querySelectorAll('.video-slide');
-    const totalSlides = slides.length;
+    function moveSlide(direction) {
+        const slides = document.querySelectorAll('.video-slide');
+        const totalSlides = slides.length;
 
-    currentSlide += direction;
+        // Pause all videos when changing slides
+        slides.forEach(slide => {
+            const video = slide.querySelector('.background-video');
+            video.pause();
+        });
 
-    if (currentSlide < 0) {
-        currentSlide = totalSlides - 1;
-    } else if (currentSlide >= totalSlides) {
-        currentSlide = 0;
+        currentSlide += direction;
+
+        if (currentSlide < 0) {
+            currentSlide = totalSlides - 1;
+        } else if (currentSlide >= totalSlides) {
+            currentSlide = 0;
+        }
+
+        const offset = -currentSlide * 100;
+        document.querySelector('.carousel').style.transform = `translateX(${offset}%)`;
     }
 
-    const offset = -currentSlide * 100;
-    document.querySelector('.carousel').style.transform = `translateX(${offset}%)`;
-}
+    function playPauseVideo(videoIndex) {
+        const video = document.getElementById(`background-video${videoIndex}`);
+        const playButton = video.nextElementSibling;
+        if (video.paused) {
+            video.play();
+        } else {
+            video.pause();
+        }
 
-function playPauseVideo(videoIndex) {
-    const video = document.getElementById(`background-video${videoIndex}`);
-    if (video.paused) {
-        video.play();
-    } else {
-        video.pause();
+        // Update the play button visibility
+        video.addEventListener('play', () => {
+            playButton.style.display = 'none';
+        });
+
+        video.addEventListener('pause', () => {
+            playButton.style.display = 'block';
+        });
     }
-}
 
-    </script>
+    // Initialize event listeners for play/pause buttons
+    document.addEventListener('DOMContentLoaded', () => {
+        const videos = document.querySelectorAll('.background-video');
+        videos.forEach(video => {
+            const playButton = video.nextElementSibling;
+            video.addEventListener('play', () => {
+                playButton.style.display = 'none';
+            });
+
+            video.addEventListener('pause', () => {
+                playButton.style.display = 'block';
+            });
+        });
+    });
+</script>
+
 </body>
 
 </html>
