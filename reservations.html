@@ -75,7 +75,7 @@
                       <div class="logo">
                         <a href="index.html">
                           <img
-                            src="img/logo.png"
+                            src="img/white_logo.png"
                             alt="Royal Plate Restaurant & Catering HTML Template"
                           />
                         </a>
@@ -133,17 +133,16 @@
                           <a href="reservations.html">Bookings</a>
                         </li>
                         <li class="dropdown">
-                          <a href="#">Catering</a>
+                          <a href="#">Catering</a> 
                           <ul class="dropdown-menu">
-                            <li><a href="catering.html">Catering page</a></li>
-                            <li>
-                              <a href="catering-single-page.html"
-                                >Catering single page</a
-                              >
-                            </li>
+                              <!-- <li><a href="catering.html">Catering page</a></li> -->
+                              <li><a href="catering-special-events.html">Special Events</a></li>
+                              <li><a href="catering-corporate.html">Corporate Events</a></li>
+                              <li><a href="catering-social.html">Social Events</a></li>
+                              <li><a href="catering-international.html">International Catering Events</a></li>
                           </ul>
                           <!-- .dropdown-menu end -->
-                        </li>
+                      </li>
                         <li>
                           <a href="gallery.html">Gallery</a>
                         </li>
@@ -508,8 +507,16 @@
                                                     <option value="">London West</option>
                                                     <option value="">London East</option>
                                                 </select>
-                                            </div> -->
-
+                       </div> -->
+                      <div class="otw-phone-wrap otw-input-wrap">
+                        <input
+                          name="phone"
+                          class="otw-reservation"
+                          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                          type="tel"
+                          placeholder="Your phone number"
+                        />
+                      </div>
                       <div class="otw-date-wrap otw-input-wrap">
                         <input
                           name="startDate"
@@ -520,7 +527,7 @@
                           data-date-format="mm/dd/yyyy"
                         />
                       </div>
-                      <div class="otw-time-wrap otw-input-wrap">
+                      <!-- <div class="otw-time-wrap otw-input-wrap">
                         <select
                           name="ResTime"
                           class="otw-reservation-time selectpicker"
@@ -538,7 +545,7 @@
                             10:30 pm
                           </option>
                         </select>
-                      </div>
+                      </div> -->
                       <div class="otw-party-size-wrap otw-input-wrap">
                         <select
                           name="partySize"

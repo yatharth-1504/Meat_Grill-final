@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
@@ -30,15 +29,85 @@
 
     <!-- Font icons -->
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" /><!-- Font awesome icons -->
+    <style>
+     .carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 50px;
+    height: 500px; /* Fixed height for the carousel */
+    background-color: black; /* Set the background color to black */
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%; /* Ensure the carousel takes up the full height of the container */
+}
+
+.video-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    height: 100%; /* Ensure each slide takes up the full height of the carousel */
+    background-color: rgba(25, 24, 24, 0.5); /* Set the background color to black */
+}
+
+.background-video {
+    height: 100%; /* Ensure the video takes up the full height of the slide */
+    width: auto;
+    object-fit: contain; /* Ensure the video maintains its aspect ratio */
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(25, 24, 24, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 24px;
+    border-radius: 50%;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.play-button i {
+    font-size: 48px;
+    color: red;
+}
+
+    </style>
 </head>
 
 <body>
-
     <!-- .header-wrapper start -->
     <div id="header-wrapper">
         <!-- #header start -->
         <header id="header">
-
             <!-- Main navigation and logo container -->
             <div class="header-inner">
                 <!-- .container start -->
@@ -50,44 +119,23 @@
                             <div class="col-md-12">
                                 <!-- .navbar start -->
                                 <nav class="navbar navbar-default nav-left">
-
                                     <!-- .navbar-header start -->
                                     <div class="navbar-header">
                                         <!-- .logo start -->
                                         <div class="logo">
                                             <a href="index.html">
-                                                <img src="img/logo.png"
+                                                <img src="img/white_logo.png"
                                                     alt="Royal Plate Restaurant & Catering HTML Template">
                                             </a>
                                         </div><!-- logo end -->
                                     </div><!-- .navbar-header end -->
-
                                     <!-- Collect the nav links, forms, and other content for toggling -->
                                     <div class="collapse navbar-collapse">
                                         <ul class="nav navbar-nav pi-nav">
                                             <li class="dropdown">
                                                 <a href="index.html">Home</a>
-                                                <!-- <ul class="dropdown-menu">
-                                                        <li><a href="index.html">Home page</a></li>
-                                                        <li><a href="elements.html">Template elements</a></li>
-                                                        <li><a href="locations.html">Intro page</a></li>
-                                                    </ul>.dropdown-menu end -->
                                             </li>
-
-                                            <li class="dropdown"><a href="about.html">About</a>
-                                                <!-- <ul class="dropdown-menu">
-                                                        <li class="dropdown dropdown-submenu">
-                                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Submenu example</a>
-                                                            <ul class="dropdown-menu">
-                                                                <li><a href="#">Submenu item 1</a></li>
-                                                                <li><a href="#">Submenu item 2</a></li>
-                                                                <li><a href="#">Submenu item 3</a></li>
-                                                                <li><a href="#">Submenu item 4</a></li>
-                                                            </ul>
-                                                        </li>
-                                                    </ul>.dropdown-menu end -->
-                                            </li>
-
+                                            <li class="dropdown"><a href="about.html">About</a></li>
                                             <li class="dropdown">
                                                 <a href="#">Menu</a>
                                                 <ul class="dropdown-menu">
@@ -95,55 +143,40 @@
                                                     <li><a href="menu-03.html">Caribbean</a></li>
                                                     <li><a href="menu-04.html">African Jiko Pizzas</a></li>
                                                     <li><a href="menu-05.html">World Onsite BBQ Experience</a></li>
-                                                    <!-- <li><a href="menu-details.html">Menu details example</a></li> -->
                                                 </ul><!-- .dropdown-menu end -->
                                             </li>
-
                                             <li class="dropdown">
                                                 <a href="reservations.html">Bookings</a>
                                             </li>
                                             <li class="dropdown">
-                                                <a href="catering.html">Catering</a>
-                                                <!-- <ul class="dropdown-menu">
-                                                        <li><a href="catering.html">Catering page</a></li>
-                                                        <li><a href="catering-single-page.html">Catering single page</a></li>
-                                                    </ul> -->
-                                                <!-- .dropdown-menu end -->
+                                                <a href="#">Catering</a> 
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="catering-special-events.html">Special Events</a></li>
+                                                    <li><a href="catering-corporate.html">Corporate Events</a></li>
+                                                    <li><a href="catering-social.html">Social Events</a></li>
+                                                    <li><a href="catering-international.html">International Catering Events</a></li>
+                                                </ul>
                                             </li>
                                             <li class="current-menu-item">
                                                 <a href="gallery.html">Gallery</a>
                                             </li>
-
                                             <li>
                                                 <a href="contact.html">Contact</a>
                                             </li>
                                         </ul><!-- .nav.navbar-nav.pi-nav end -->
-
                                         <!-- Responsive menu start -->
                                         <div id="dl-menu" class="dl-menuwrapper">
                                             <button class="dl-trigger">Open Menu</button>
-
                                             <ul class="dl-menu">
                                                 <li>
                                                     <a href="">Home</a>
                                                     <ul class="dl-submenu">
                                                         <li><a href="index.html">Home page</a></li>
-                                                        <!-- <li><a href="elements.html">Template elements</a></li>
-                                                            <li><a href="locations.html">Intro page</a></li> -->
                                                     </ul><!-- .dl-submenu end -->
                                                 </li><!-- Home li end -->
-
                                                 <li>
                                                     <a href="">About</a>
-                                                    <!-- <ul class="dl-submenu">
-                                                            <li><a href="about.html">About</a></li>
-                                                            <li><a href="">Submenu item 1</a></li>
-                                                            <li><a href="">Submenu item 2</a></li>
-                                                            <li><a href="">Submenu item 3</a></li>
-                                                            <li><a href="">Submenu item 4</a></li>
-                                                        </ul>.dl-submenu end -->
                                                 </li><!-- About li end -->
-
                                                 <li>
                                                     <a href="">Menu</a>
                                                     <ul class="dl-submenu">
@@ -151,10 +184,8 @@
                                                         <li><a href="menu-03.html">Caribbean</a></li>
                                                         <li><a href="menu-04.html">African Jiko Pizzas</a></li>
                                                         <li><a href="menu-05.html">World Onsite BBQ Experience</a></li>
-                                                        <!-- <li><a href="menu-details.html">Menu details example</a></li> -->
                                                     </ul><!-- .dl-submenu end -->
                                                 </li><!-- Menu li end -->
-
                                                 <li>
                                                     <a href="reservations.html">Bookings</a>
                                                 </li><!-- Reservations li end -->
@@ -169,11 +200,9 @@
                                                 <li>
                                                     <a href="gallery.html">Gallery</a>
                                                 </li><!-- Gallery li end -->
-
                                                 <li>
                                                     <a href="contact.html">Contact</a>
                                                 </li><!-- Contact li end -->
-
                                             </ul><!-- .dl-menu end -->
                                         </div><!-- (Responsive menu) #dl-menu end -->
                                     </div><!-- .navbar.navbar-collapse end -->
@@ -185,7 +214,6 @@
             </div><!-- .header-inner end -->
         </header><!-- #header end -->
     </div><!-- #header-wrapper end -->
-
 
     <!-- .page-content start -->
     <div class="page-content custom-img-background dark page-title page-title-4 mb-100">
@@ -213,7 +241,6 @@
                     <div class="custom-heading style-1">
                         <h3><span>Exquisite </span></h3>
                         <h3>Catering gallery</h3>
-
                         <!-- .divider.style-1 start -->
                         <div class="divider style-1 center">
                             <span class="hr-simple left"></span>
@@ -239,7 +266,6 @@
                         <figure class="gallery-item-container">
                             <div class="gallery-img">
                                 <img src="img/dropbox_photos/outdoor-1.jpg" alt="Meat & Grill Catering Services" />
-
                                 <div class="hover-mask-container">
                                     <div class="hover-zoom">
                                         <a href="img/dropbox_photos/outdoor-1.jpg" class="triggerZoom fa fa-search"></a>
@@ -253,7 +279,6 @@
                         <figure class="gallery-item-container">
                             <div class="gallery-img">
                                 <img src="img/dropbox_photos/outdoor-2.jpg" alt="Meat & Grill Catering Services" />
-
                                 <div class="hover-mask-container">
                                     <div class="hover-zoom">
                                         <a href="img/dropbox_photos/outdoor-2.jpg" class="triggerZoom fa fa-search"></a>
@@ -263,12 +288,10 @@
                         </figure><!-- .gallery-item-container end -->
                     </li><!-- .isotope-item end -->
 
-                    <!-- replace with chef 1 -->
                     <li class="col-xs-6 col-md-3 isotope-item indoor">
                         <figure class="gallery-item-container">
                             <div class="gallery-img">
                                 <img src="img/dropbox_photos/outdoor-4.jpg" alt="Meat & Grill Catering Services" />
-
                                 <div class="hover-mask-container">
                                     <div class="hover-zoom">
                                         <a href="img/dropbox_photos/outdoor-4.jpg" class="triggerZoom fa fa-search"></a>
@@ -281,13 +304,10 @@
                     <li class="col-xs-6 col-md-3 isotope-item indoor">
                         <figure class="gallery-item-container">
                             <div class="gallery-img">
-                                <img src="img/dropbox_photos/outdoor-5.jpg"
-                                    alt="Meat & Grill Catering Services" />
-
+                                <img src="img/dropbox_photos/outdoor-5.jpg" alt="Meat & Grill Catering Services" />
                                 <div class="hover-mask-container">
                                     <div class="hover-zoom">
-                                        <a href="img/dropbox_photos/outdoor-5.jpg"
-                                            class="triggerZoom fa fa-search"></a>
+                                        <a href="img/dropbox_photos/outdoor-5.jpg" class="triggerZoom fa fa-search"></a>
                                     </div><!-- .hover-zoom end -->
                                 </div><!-- .hover-mask-container end -->
                             </div><!-- .gallery-img end -->
@@ -298,7 +318,6 @@
                         <figure class="gallery-item-container">
                             <div class="gallery-img">
                                 <img src="img/dropbox_photos/indoor-2.jpg" alt="Meat & Grill Catering Services" />
-
                                 <div class="hover-mask-container">
                                     <div class="hover-zoom">
                                         <a href="img/dropbox_photos/indoor-2.jpg" class="triggerZoom fa fa-search"></a>
@@ -312,7 +331,6 @@
                         <figure class="gallery-item-container">
                             <div class="gallery-img">
                                 <img src="img/dropbox_photos/chef-2.png" alt="Meat & Grill Catering Services" />
-
                                 <div class="hover-mask-container">
                                     <div class="hover-zoom">
                                         <a href="img/dropbox_photos/chef-2.png" class="triggerZoom fa fa-search"></a>
@@ -325,7 +343,6 @@
                         <figure class="gallery-item-container">
                             <div class="gallery-img">
                                 <img src="img/dropbox_photos/chef-hat.jpg" alt="Meat & Grill Catering Services" />
-
                                 <div class="hover-mask-container">
                                     <div class="hover-zoom">
                                         <a href="img/dropbox_photos/chef-hat.jpg" class="triggerZoom fa fa-search"></a>
@@ -338,7 +355,6 @@
                         <figure class="gallery-item-container">
                             <div class="gallery-img">
                                 <img src="img/dropbox_photos/indoor-catering.jpg" alt="Meat & Grill Catering Services" />
-
                                 <div class="hover-mask-container">
                                     <div class="hover-zoom">
                                         <a href="img/dropbox_photos/indoor-catering.jpg" class="triggerZoom fa fa-search"></a>
@@ -351,7 +367,6 @@
                         <figure class="gallery-item-container">
                             <div class="gallery-img">
                                 <img src="img/dropbox_photos/chef-1.jpg" alt="Meat & Grill Catering Services" />
-
                                 <div class="hover-mask-container">
                                     <div class="hover-zoom">
                                         <a href="img/dropbox_photos/chef-1.jpg" class="triggerZoom fa fa-search"></a>
@@ -364,7 +379,6 @@
                         <figure class="gallery-item-container">
                             <div class="gallery-img">
                                 <img src="img/dropbox_photos/outdoor-7.jpg" alt="Meat & Grill Catering Services" />
-
                                 <div class="hover-mask-container">
                                     <div class="hover-zoom">
                                         <a href="img/dropbox_photos/outdoor-7.jpg" class="triggerZoom fa fa-search"></a>
@@ -377,7 +391,6 @@
                         <figure class="gallery-item-container">
                             <div class="gallery-img">
                                 <img src="img/dropbox_photos/chef-3.jpg" alt="Meat & Grill Catering Services" />
-
                                 <div class="hover-mask-container">
                                     <div class="hover-zoom">
                                         <a href="img/dropbox_photos/chef-3.jpg" class="triggerZoom fa fa-search"></a>
@@ -390,7 +403,6 @@
                         <figure class="gallery-item-container">
                             <div class="gallery-img">
                                 <img src="img/dropbox_photos/outdoor-8.jpg" alt="Meat & Grill Catering Services" />
-
                                 <div class="hover-mask-container">
                                     <div class="hover-zoom">
                                         <a href="img/dropbox_photos/outdoor-8.jpg" class="triggerZoom fa fa-search"></a>
@@ -403,7 +415,6 @@
                         <figure class="gallery-item-container">
                             <div class="gallery-img">
                                 <img src="img/dropbox_photos/outdoor-3.jpg" alt="Meat & Grill Catering Services" />
-
                                 <div class="hover-mask-container">
                                     <div class="hover-zoom">
                                         <a href="img/dropbox_photos/outdoor-3.jpg" class="triggerZoom fa fa-search"></a>
@@ -418,13 +429,55 @@
     </div><!-- .page-content end -->
 
     <!-- .page-content start -->
-     <div class="video" style="height: fit-content; position: relative;">
-        <video style="width: 100%;" id="background-video" class="background-video" controls>
-            <source src="img/dropbox_photos/home-video.mp4" type="video/mp4">
-        </video>
-        <button style="position: absolute; top: 50%; left: 50%; background-color: white; padding: 0;margin: 0;border-radius: 50%;" id="play-button"><i class="fa fa-play-circle" style="font-size:48px;color:red;"></i></button>
-     </div>
+    <div class="page-content">
+        <div class="container">
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="video-slide">
+                        <video id="background-video1" class="background-video" controls>
+                            <source src="img/dropbox_photos/home-video.mp4" type="video/mp4">
+                        </video>
+                        <button class="play-button" onclick="playPauseVideo(1)"><i class="fa fa-play-circle"></i></button>
+                    </div>
+                    <div class="video-slide">
+                        <video id="background-video2" class="background-video" controls>
+                            <source src="img/videos/Video2.mov" type="video/mp4">
+                        </video>
+                        <button class="play-button" onclick="playPauseVideo(2)"><i class="fa fa-play-circle"></i></button>
+                    </div>
+                    <div class="video-slide">
+                        <video id="background-video3" class="background-video" controls>
+                            <source src="img/videos/Video3.mov" type="video/mp4">
+                        </video>
+                        <button class="play-button" onclick="playPauseVideo(3)"><i class="fa fa-play-circle"></i></button>
+                    </div>
+                    <div class="video-slide">
+                        <video id="background-video4" class="background-video" controls>
+                            <source src="img/videos/Video4.mov" type="video/mp4">
+                        </video>
+                        <button class="play-button" onclick="playPauseVideo(4)"><i class="fa fa-play-circle"></i></button>
+                    </div>
+                    <div class="video-slide">
+                        <video id="background-video5" class="background-video" controls>
+                            <source src="img/videos/Video5.mov" type="video/mp4">
+                        </video>
+                        <button class="play-button" onclick="playPauseVideo(5)"><i class="fa fa-play-circle"></i></button>
+                    </div>
+                    <div class="video-slide">
+                        <video id="background-video6" class="background-video" controls>
+                            <source src="img/videos/Video6.mov" type="video/mp4">
+                        </video>
+                        <button class="play-button" onclick="playPauseVideo(6)"><i class="fa fa-play-circle"></i></button>
+                    </div>
+                </div>
+                <button class="carousel-control prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="carousel-control next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </div>
+    </div>
     
+    <!-- .page-content end -->
+
     <!-- #footer-wrapper start -->
     <div id="footer-wrapper">
         <!-- #footer start -->
@@ -433,18 +486,12 @@
             <div class="container">
                 <!-- .row start -->
                 <div class="row mb-60">
-
-                    <div class="col-md-4">
-
-                    </div>
-
+                    <div class="col-md-4"></div>
                     <!-- .col-md-4 start -->
                     <div class="col-md-4 centered">
                         <a href="index.html">
-                            <img style="height: 125px;" src="img/logo.png"
-                                alt="Royal Plate Restaurant & Catering HTML Template">
+                            <img style="height: 125px;" src="img/logo.png" alt="Royal Plate Restaurant & Catering HTML Template">
                         </a>
-
                         <ul class="contact-info-list">
                             <li style="font-weight: 900;">
                                 Berkshire, London
@@ -453,28 +500,21 @@
                                 <span>CONTACT NUMBER:</span><br /> +44 (0) 1753 540 012 <br /> +44 (0) 7931 099 139
                             </li>
                             <li><span>CONTACT EMAIL:</span><br /> info@Meatgrill.co.uk</li>
-
                             <li>
                                 <span>WORKING HOURS:</span>
                             </li>
-
                             <li>
                                 MON- SUN: 07:00 AM - 10:00 PM
                             </li>
                         </ul>
                     </div><!-- .col-md-4 end -->
-
                     <!-- .col-md-4 start -->
-                    <div class="col-md-4">
-
-                    </div><!-- .col-md-4 end-->
+                    <div class="col-md-4"></div><!-- .col-md-4 end-->
                 </div><!-- .row end -->
-
                 <!-- .row start -->
                 <div class="row mb-40">
                     <!-- .col-md-6 start -->
                     <div class="col-md-6">
-
                         <!-- .social-links start -->
                         <ul class="social-links">
                             <li><a href="https://www.facebook.com/Meatandgrilluk" target="_blank"><i class="fa fa-facebook"></i></a></li>
@@ -483,7 +523,6 @@
                             <li><a href="https://www.tiktok.com/@meatandgrilluk" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
                         </ul><!-- .social-links end -->
                     </div><!-- .col-md-6 end -->
-
                     <!-- .col-md-6 start -->
                     <div class="col-md-6">
                         <!-- .newsletter start -->
@@ -507,7 +546,6 @@
                 <div class="col-md-6">
                     <p>© Meat & Grill Catering 2024. All rights reserved.</p>
                 </div><!-- .col-md-6 end -->
-
                 <!-- .col-md-6 start -->
                 <div class="col-md-6">
                     <ul class="breadcrumb">
@@ -522,9 +560,7 @@
                 </div><!-- .col-md-6 end -->
             </div><!-- .row end -->
         </div><!-- .container end -->
-
         <a href="#" class="scroll-up"><i class="fa fa-angle-double-up"></i></a>
-
     </div><!-- .copyright-container end -->
 
     <script src="js/jquery-2.1.4.min.js"></script><!-- jQuery library -->
@@ -540,17 +576,14 @@
     <script src="js/ScrollToPlugin.min.js"></script> <!-- Plugin for smooth scrolling-->
     <script src="https://kit.fontawesome.com/6cef4b276f.js" crossorigin="anonymous"></script>
 
-
     <script>
         /* <![CDATA[ */
         jQuery(document).ready(function ($) {
             'use strict';
-
             // BOOKING FORM AJAX SUBMIT START
             $('.otw-widget-form .otw-submit').on('click', function (event) {
                 event.preventDefault();
                 var $form = $(this).closest('form');
-
                 var name = $form.find('.otw-reservation-name').val();
                 var email = $form.find('.otw-reservation-email').val();
                 var date = $form.find('.otw-reservation-date').val();
@@ -565,29 +598,67 @@
                     alert(data);
                 });
             }); // BOOKING FORM AJAX SUBMIT END
-
-
         });
         /* ]]> */
     </script>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var video = document.getElementById('background-video');
-        var playButton = document.getElementById('play-button');
+    let currentSlide = 0;
 
-        playButton.addEventListener('click', function () {
-            video.play();
-            playButton.style.display = 'none'; // Hide the play button once the video starts
+    function moveSlide(direction) {
+        const slides = document.querySelectorAll('.video-slide');
+        const totalSlides = slides.length;
+
+        // Pause all videos when changing slides
+        slides.forEach(slide => {
+            const video = slide.querySelector('.background-video');
+            video.pause();
         });
 
-        // Ensure the video plays with sound on user interaction
-        document.addEventListener('click', function () {
-            if (video.paused && playButton.style.display !== 'none') {
-                video.play();
-                playButton.style.display = 'none'; // Hide the play button once the video starts
-            }
-        }, { passive: false } );
+        currentSlide += direction;
+
+        if (currentSlide < 0) {
+            currentSlide = totalSlides - 1;
+        } else if (currentSlide >= totalSlides) {
+            currentSlide = 0;
+        }
+
+        const offset = -currentSlide * 100;
+        document.querySelector('.carousel').style.transform = `translateX(${offset}%)`;
+    }
+
+    function playPauseVideo(videoIndex) {
+        const video = document.getElementById(`background-video${videoIndex}`);
+        const playButton = video.nextElementSibling;
+        if (video.paused) {
+            video.play();
+        } else {
+            video.pause();
+        }
+
+        // Update the play button visibility
+        video.addEventListener('play', () => {
+            playButton.style.display = 'none';
+        });
+
+        video.addEventListener('pause', () => {
+            playButton.style.display = 'block';
+        });
+    }
+
+    // Initialize event listeners for play/pause buttons
+    document.addEventListener('DOMContentLoaded', () => {
+        const videos = document.querySelectorAll('.background-video');
+        videos.forEach(video => {
+            const playButton = video.nextElementSibling;
+            video.addEventListener('play', () => {
+                playButton.style.display = 'none';
+            });
+
+            video.addEventListener('pause', () => {
+                playButton.style.display = 'block';
+            });
+        });
     });
 </script>
 
