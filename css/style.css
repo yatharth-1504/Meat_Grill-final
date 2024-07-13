@@ -824,7 +824,9 @@ a.more-details .fa {
   padding: 30px 0;
 }
 .page-title-1 {
-  background-image: url("../img/dropbox_photos/about-bkg-2.jpg");
+  /* background-image: url("../img/dropbox_photos/about-bkg-2.jpg"); */
+  background-image: url("../img/pics_numbered/14.jpg");
+  background-size: contain !important;
   opacity: 85%;
   /* background-clip: url("..img/page-titles/page-title-video-1.mp4"); */
 }
@@ -833,9 +835,40 @@ a.more-details .fa {
   background-image: url("../img/page-titles/page-title-2.jpg");
 }
 .page-title-3 {
-  opacity: 85%;
-  background-image: url("../img/page-titles/page-title-2.jpg");
+  opacity: 75%;
+  /* background-image: url("../img/page-titles/page-title-2.jpg"); */
+  background-image: url("../img/pics_numbered/24.jpg");
 }
+
+.page-title-carribean {
+  opacity: 75%;
+  background-image: url("../img/pics_numbered/25_1.jpg");
+  /* background-size: cover !important; */
+}
+
+.page-title-jiko {
+  opacity: 85%;
+  background-image: url("../img/pics_numbered/26.jpg");
+  /* background-size: cover !important; */
+}
+
+.page-title-world {
+  opacity: 75%;
+  background-image: url("../img/pics_numbered/27.png");
+  background-size: 100% auto !important;
+  background-position: center;
+  background-color: black;
+}
+
+.page-title-bookings {
+  /* opacity: 60%; */
+  opacity: 85%;
+  background-image: url("../img/page-titles/page-title-video-2.gif");
+  background-size: 100% auto !important;
+  background-position: center;
+  background-color: black;
+}
+
 .page-title-4 {
   /* opacity: 60%; */
   opacity: 85%;
@@ -851,7 +884,8 @@ a.more-details .fa {
 }
 .page-title-7 {
   opacity: 85%;
-  background-image: url("../img/dropbox_photos/destination-catering.jpg");
+  /* background-image: url("../img/dropbox_photos/destination-catering.jpg"); */
+  background-color: black;
 }
 .page-title-8 {
   opacity: 85%;
@@ -910,21 +944,25 @@ a.more-details .fa {
 }
 .bkg-img3 {
   /* background-image: url("../img/pics/bkg-img3.jpg"); */
-  background-image: url("../img/dropbox_photos/meat-feast.jpg");
+  background-image: url("../img/pics_numbered/7.jpg");
 }
 .bkg-img4 {
   /* background-image: url("../img/pics/bkg-img4.jpg"); */
   background-image: url("../img/dropbox_photos/indoor-outdoor.png");
 }
 .bkg-img5 {
-  background-image: url("../img/pics/bkg-img5.jpg");
+  /* background-image: url("../img/pics/bkg-img5.jpg"); */
+  background-image: url("../img/pics_numbered/13_2.jpg");
+  background-size: contain;
 }
 .bkg-img6 {
   background-image: url("../img/dropbox_photos/indoor-outdoor.png");
+  /* background-image: url("../img/pics_numbered/1"); */
   /* background-image: url("../img/dropbox_photos/our-story.jpg"); */
 }
 .bkg-img7 {
-  background-image: url("../img/dropbox_photos/destination-catering.jpg");
+  /* background-image: url("../img/dropbox_photos/destination-catering.jpg"); */
+  background-image: url("../img/pics_numbered/20.png");
 }
 .bkg-img8 {
   background-image: url("../img/pics/bkg-img8.jpg");
