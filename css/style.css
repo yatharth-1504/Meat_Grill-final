@@ -1818,6 +1818,23 @@ ul#filters {
   background-color: #4d4d4d;
 }
 
+.hover-mask-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hover-mask-container a {
+  position: relative;
+  color: yellow;
+  bottom: -20%;
+  left: 0;
+  margin: 0;
+  width: auto;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 /* ==========================================================================
     7.8.3. SIMPLE GALLERY CAROUSEL
     ========================================================================= */
