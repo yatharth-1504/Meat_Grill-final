@@ -258,7 +258,7 @@ body {
 .logo img {
   max-width: 100%;
   height: auto;
-  max-height: 180px;
+  max-height: 160px;
   display: block;
 }
 img {
@@ -652,7 +652,7 @@ a.more-details .fa {
   margin-bottom: 0;
 }
 .logo {
-  margin: 20px auto;
+  margin: 10px auto;
   max-width: 190px;
   max-height: 82px;
 }
@@ -829,6 +829,7 @@ a.more-details .fa {
   background-size: contain !important;
   opacity: 85%;
   background-size: 100% auto !important;
+  border-radius: 0px !important;
   background-position: center;
   background-color: black;
   /* background-clip: url("..img/page-titles/page-title-video-1.mp4"); */
@@ -841,7 +842,7 @@ a.more-details .fa {
   opacity: 75%;
   /* background-image: url("../img/page-titles/page-title-2.jpg"); */
   background-image: url("../img/pics_numbered/24.jpg");
-  margin-top: 200px;
+  margin-top: 175px;
   background-color: black;
   border-radius: 0px !important;
 }
@@ -851,14 +852,14 @@ a.more-details .fa {
   top: 0;
   left: 0;
   width: 100%;
-  height: 200px; /* Match this with your margin-top */
+  height: 175px; /* Match this with your margin-top */
   background: black;
 }
 
 .page-title-carribean {
   opacity: 75%;
   background-image: url("../img/pics_numbered/25_1.jpg");
-  margin-top: 200px;
+  margin-top: 175px;
   border-radius: 0px !important;
   /* background-size: cover !important; */
 }
@@ -869,7 +870,7 @@ a.more-details .fa {
   top: 0;
   left: 0;
   width: 100%;
-  height: 200px; /* Match this with your margin-top */
+  height: 175px; /* Match this with your margin-top */
   background: black;
 }
 
@@ -878,7 +879,7 @@ a.more-details .fa {
   background-image: url("../img/pics_numbered/26.jpg");
   /* background-size: cover !important; */
   border-radius: 0px !important;
-  margin-top: 200px;
+  margin-top: 175px;
 }
 
 .page-title-jiko::before{
@@ -887,7 +888,7 @@ a.more-details .fa {
   top: 0;
   left: 0;
   width: 100%;
-  height: 200px; /* Match this with your margin-top */
+  height: 175px; /* Match this with your margin-top */
   background: black;
 }
 
@@ -897,7 +898,7 @@ a.more-details .fa {
   background-size: 100% auto !important;
   background-position: center;
   background-color: black;
-  margin-top: 200px;
+  /* margin-top: 175px; */
   border-radius: 0px !important;
 }
 
@@ -907,7 +908,7 @@ a.more-details .fa {
   top: 0;
   left: 0;
   width: 100%;
-  height: 200px; /* Match this with your margin-top */
+  height: 175px; /* Match this with your margin-top */
   background: black;
 }
 
@@ -916,6 +917,7 @@ a.more-details .fa {
   opacity: 85%;
   background-image: url("../img/page-titles/page-title-video-2.gif");
   background-size: 100% auto !important;
+  border-radius: 0px !important;
   background-position: center;
   background-color: black;
 }
@@ -924,6 +926,7 @@ a.more-details .fa {
   /* opacity: 60%; */
   opacity: 85%;
   background-image: url("../img/dropbox_photos/indoor-outdoor.png");
+  border-radius: 0px !important;
 }
 .page-title-5 {
   opacity: 85%;
@@ -935,6 +938,7 @@ a.more-details .fa {
 }
 .page-title-7 {
   opacity: 85%;
+  border-radius: 0px !important;
   /* background-image: url("../img/dropbox_photos/destination-catering.jpg"); */
   background-color: black;
 }
